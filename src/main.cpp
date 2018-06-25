@@ -33,13 +33,36 @@ int main (){
             
             while (!Correct);
             
-        }else {
+        } else {
+            
+            do {
+                Num=rand()%10+1;
+                if (Num>Count)
+                    Num=Count;
+                std::cout<<"Мой ход. Я взял "<<Num<<" спичек\n";}
+            while (!Correct);
             
         }
         
         
         Count-=Num;
+        
+        if (Player==1){
+            Player=2;
+            
+        } else {
+            Player=1;
+        }
+    }
+    
     while (Count>0);
+    
+    if (Player == 2){
+        std::cout<<"Вы победили!\n";
+        
+    } else {
+        std::cout<<"Вы проиграли!\n";
+    }
     
     return 0;
 }
