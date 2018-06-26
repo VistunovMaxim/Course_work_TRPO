@@ -6,6 +6,15 @@ const int InitialCount=100;
 
 int Count, Num, Player;
 bool Correct;
+
+int check(int Num){
+    if(Num>=1&&Num<=10&&Num<=Count){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 int main (){
     
     Player=1;
@@ -19,16 +28,13 @@ int main (){
                 std::cout<<"Ваш ход. На столе "<<Count<<" спичек.\n";
                 std::cout<<"Сколько спичек Вы берете?\n";
                 std::cin>>Num;
-                if(Num>=1&&Num<=10&&Num<=Count){
-                    
-                    Correct=true;
-                    
-                } else{
-                    
+                
+                    Correct = check(Num);
+                
+                if(!Correct){
                     std::cout<<"Неверно! Повторите ввод!\n";
-                    Correct=false;
-                    
                 }
+                
             }
             
             while (!Correct);
