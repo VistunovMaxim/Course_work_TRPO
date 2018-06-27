@@ -1,2 +1,1 @@
-# Course_work_TRPO
-Course work on the subject of Software Development Technologies
+[![Build Status](https://travis-ci.org/VistunovMaxim/Course_work_TRPO.svg?branch=master)](https://travis-ci.org/VistunovMaxim/Course_work_TRPO)
