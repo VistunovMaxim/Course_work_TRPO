@@ -8,29 +8,27 @@ const int InitialCount=100;
 int Count, Num, Player;
 int Correct;
 
-int main (){
+int main () {
     
     Player=1;
     Count=InitialCount;
     
     do {
         
-        if (Player==1){
+        if (Player==1) {
             
-            do{
+            do {
                 printf("Ваш ход. На столе %d спичек.\n", Count);
                 printf("Сколько спичек Вы берете?\n");
                 scanf("%d", &Num);
                 
                 Correct = check(Num, Count);
                 
-                if(Correct == 0){
+                if (Correct == 0) {
                     printf("Неверно! Повторите ввод!\n");
                 }
                 
-            }
-            
-            while (Correct == 0);
+            } while (Correct == 0);
             
         } else {
             
@@ -47,17 +45,15 @@ int main (){
         
         Count-=Num;
         
-        if (Player==1){
+        if (Player==1) {
             Player=2;
             
         } else {
             Player=1;
         }
-    }
+    } while (Count>0);
     
-    while (Count>0);
-    
-    if (Player == 2){
+    if (Player == 2) {
         printf("Вы победили!\n");
         
     } else {
