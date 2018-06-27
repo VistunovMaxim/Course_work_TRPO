@@ -3,7 +3,7 @@
 #include "check.h"
 #include "ctest.h"
 
-CTEST(check, abroad){
+CTEST(check, abroad) {
     printf("Test abroad started");
     int correct;
     const int one = 11;
@@ -12,7 +12,7 @@ CTEST(check, abroad){
     ASSERT_EQUAL(exp, correct);
 }
 
-CTEST(check, otrAbroad){
+CTEST(check, otrAbroad) {
     printf("Test otrAbroad started");
     int correct;
     const int one = -1;
@@ -21,7 +21,7 @@ CTEST(check, otrAbroad){
     ASSERT_EQUAL(exp, correct);
 }
 
-CTEST(check, normAbroad){
+CTEST(check, normAbroad) {
     printf("Test otrAbroad started");
     int correct;
     const int one = 5;
